@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest with coverage
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+
+
+# What always_run: true does: Without this, 
+# pre-commit only runs a hook if the files 
+# it's associated with changed. But for tests,
+# you always want to run the full suite 
+# before committing — even if you only changed
+# a comment, tests should still pass.
+
+# ===> 10k tests for 1 comment change, worth it?
