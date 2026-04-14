@@ -1,6 +1,11 @@
 # Task Manager API
+A client can create, list, and complete tasks. 
 
-![Workflow](task-manager-api/tdd_fastapi_workflow.svg)
+This is a Test-Driven Development portfolio project using `venv`, `pytest`, `pytest-cov`, `pytest-mock`, `pre-commits` and `FastAPI`. 
+
+![tdd_fastapi_workflow](https://github.com/user-attachments/assets/4bb4420d-2b63-4f48-915d-85f117dabbd4)
+
+
 
 
 1. Recreate Virtual Environment with
