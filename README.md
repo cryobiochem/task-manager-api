@@ -11,6 +11,10 @@ The reason: if you write code first, you tend to write tests that fit your code.
 If you write tests first, you write code that fits your requirements. 
 It also means every line of your app exists because a test demanded it.
 
+## Pytest + Pre-commits bomb
+Pre-commit intercepts the commit, runs ruff, then runs pytest with coverage. If all 6 tests pass and coverage is above 80%, the commit goes through. If anything fails, you see exactly what broke and the commit is blocked.
+This is the whole point: you can never accidentally commit broken code. The toolchain enforces correctness at the moment it matters most.
+
 ## To Recreate Virtual Environment with
 
 ```bash
